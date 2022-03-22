@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const swaggerJsDoc = require('swagger-jsdoc')
 const swaggerUi = require('swagger-ui-express')
 const { initiMonogoConn } = require("./src/database/mongo");
-const port = 2022;
+const port = process.env.PORT || 2022;
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));

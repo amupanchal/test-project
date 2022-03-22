@@ -12,7 +12,7 @@ signInRouter.post('/sign-in', async (req, res) => {
             res.json({ role: findUser.role, token: token })
         } else {
             let newUser = userModel({
-                email: " ",
+                email: "",
                 role: "Public",
                 blockchainAddress: body.blockchainAddress
             })
